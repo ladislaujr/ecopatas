@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecopatas - Seu Mundo Pet!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #28a745; /* Um verde vibrante para o tema 'eco' */
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.1em;
+        }
+        nav {
+            background-color: #343a40; /* Um cinza escuro para contraste */
+            color: #fff;
+            padding: 0.7rem 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #28a745; /* Realça com a cor do cabeçalho */
+        }
+        .hero {
+            background: url('https://via.placeholder.com/1500x500/87CEEB/FFFFFF?text=Seu+Pet+Merece+o+Melhor') no-repeat center center/cover; /* Imagem de fundo atraente */
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.3em;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+        }
+        .hero .btn {
+            background-color: #ffc107; /* Amarelo chamativo */
+            color: #333;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .hero .btn:hover {
+            background-color: #e0a800; /* Tom mais escuro no hover */
+        }
+        .content-section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .content-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #28a745;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 200px; /* Altura fixa para consistência */
+            object-fit: cover; /* Garante que a imagem preencha o espaço */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .product-item {
+            background-color: #e6ffe6; /* Fundo levemente verde para produtos */
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .product-item img {
+            max-width: 100%;
+            height: 180px;
+            object-fit: contain; /* Garante que o produto inteiro seja visível */
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .product-item h3 {
+            margin-top: 0;
+            color: #28a745;
+        }
+        .product-item p {
+            font-size: 0.9em;
+            color: #666;
+        }
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #28a745;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividade básica */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .hero h2 {
+                font-size: 2.2em;
+            }
+            .hero p {
+                font-size: 1.1em;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ecopatas</h1>
+        <p>Amor, Cuidado e Aventura para Seu Pet!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#videos">Vídeos Fofos</a></li>
+            <li><a href="#galeria">Galeria de Imagens</a></li>
+            <li><a href="#produtos">Loja Pet</a></li>
+            <li><a href="politica-de-privacidade.html">Política de Privacidade</a></li>
+            <li><a href="https://www.facebook.com/suapaginaecopatas" target="_blank">Nossa Página no Facebook</a></li>
+        </ul>
+    </nav>
+
+    <section id="inicio" class="hero">
+        <h2>Bem-vindo ao Universo Ecopatas!</h2>
+        <p>Aqui você encontra vídeos e imagens incríveis dos seus animais domésticos favoritos, além de uma seleção especial de produtos para cuidar do seu companheiro de quatro patas com amor e responsabilidade.</p>
+        <a href="#videos" class="btn">Explorar Vídeos</a>
+        <a href="#produtos" class="btn">Comprar Produtos</a>
+    </section>
+
+    <section id="videos" class="content-section">
+        <h2>Vídeos Mais Recentes</h2>
+        <p style="text-align: center; margin-bottom: 30px;">Assista aos momentos mais divertidos e emocionantes dos nossos amigos peludos!</p>
+        <div class="gallery">
+            <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 8px;"></iframe>
+            <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 8px;"></iframe>
+            <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 8px;"></iframe>
+            <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 8px;"></iframe>
+            </div>
+        <p style="text-align: center; margin-top: 30px;">
+            <a href="https://www.facebook.com/suapaginaecopatas/videos" target="_blank" class="btn">Ver Todos os Vídeos no Facebook</a>
+        </p>
+    </section>
+
+    <section id="galeria" class="content-section">
+        <h2>Nossa Galeria de Imagens</h2>
+        <p style="text-align: center; margin-bottom: 30px;">Momentos adoráveis e inspiradores dos pets que amamos!</p>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/300x200?text=Cachorro+Feliz" alt="Cachorro Feliz">
+            <img src="https://via.placeholder.com/300x200?text=Gato+Brincalhão" alt="Gato Brincalhão">
+            <img src="https://via.placeholder.com/300x200?text=Hamster+Fofo" alt="Hamster Fofo">
+            <img src="https://via.placeholder.com/300x200?text=Coelho+Descansando" alt="Coelho Descansando">
+            <img src="https://via.placeholder.com/300x200?text=Pássaro+Colorido" alt="Pássaro Colorido">
+            <img src="https://via.placeholder.com/300x200?text=Peixe+Exótico" alt="Peixe Exótico">
+            </div>
+        <p style="text-align: center; margin-top: 30px;">
+            <a href="https://www.facebook.com/suapaginaecopatas/photos" target="_blank" class="btn">Ver Todas as Fotos no Facebook</a>
+        </p>
+    </section>
+
+    <section id="produtos" class="content-section">
+        <h2>Produtos Essenciais para Seu Pet</h2>
+        <p style="text-align: center; margin-bottom: 30px;">Descubra nossa seleção de produtos de alta qualidade para o bem-estar e alegria do seu animal de estimação.</p>
+        <div class="products">
+            <div class="product-item">
+                <img src="https://via.placeholder.com/200x180?text=Ração+Premium" alt="Ração Premium">
+                <h3>Ração Super Premium</h3>
+                <p>Nutrição completa e balanceada para cães e gatos de todas as idades.</p>
+                <a href="#" class="btn">Ver Detalhes</a>
+            </div>
+            <div class="product-item">
+                <img src="https://via.placeholder.com/200x180?text=Brinquedo+Interativo" alt="Brinquedo Interativo">
+                <h3>Brinquedo Interativo</h3>
+                <p>Estimule a mente e o corpo do seu pet com diversão garantida.</p>
+                <a href="#" class="btn">Ver Detalhes</a>
+            </div>
+            <div class="product-item">
+                <img src="https://via.placeholder.com/200x180?text=Cama+Ortopédica" alt="Cama Ortopédica">
+                <h3>Cama Ortopédica</h3>
+                <p>Conforto e suporte ideais para um sono tranquilo e reparador.</p>
+                <a href="#" class="btn">Ver Detalhes</a>
+            </div>
+            <div class="product-item">
+                <img src="https://via.placeholder.com/200x180?text=Coleira+Personalizada" alt="Coleira Personalizada">
+                <h3>Coleira Personalizada</h3>
+                <p>Estilo e segurança com a coleira perfeita para o seu pet.</p>
+                <a href="#" class="btn">Ver Detalhes</a>
+            </div>
+            </div>
+        <p style="text-align: center; margin-top: 30px;">
+            <a href="https://www.facebook.com/suapaginaecopatas/shop" target="_blank" class="btn">Visitar Nossa Loja no Facebook</a>
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ecopatas. Todos os direitos reservados.</p>
+        <p>
+            <a href="politica-de-privacidade.html">Política de Privacidade</a>
+            <a href="https://www.facebook.com/suapaginaecopatas" target="_blank">Nossa Página no Facebook</a>
+        </p>
+        <p>Desenvolvido com carinho para amantes de pets em Mauá, São Paulo, Brasil.</p>
+    </footer>
+
+    <script>
+        // Pequena funcionalidade para scroll suave
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
